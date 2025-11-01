@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "CogniWrite (Basic)",
+  "version": "1.0",
+  "description": "Right-click to summarize selected text using built-in AI.",
+  "permissions": [
+    "ai",
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "icons": {
+    "128": "icon.png"
+  }
+}
